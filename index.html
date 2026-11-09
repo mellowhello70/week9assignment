@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humpty's Dumplings | Online Ordering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1>Humpty's Dumplings</h1>
+      <p>Delicious, authentic dumplings made for food lovers!</p>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="intro" aria-labelledby="about-heading">
+      <div>
+        <h2 id="about-heading">Dumplings Made with Love</h2>
+        <p>Humpty's Dumplings serves savory, appetizing dumplings with mouth-watering fillings and tasty dipping sauces. Find us serving the greater Philadelphia area. Check the truck's current schedule to confirm its location before planning pickup.</p>
+        <p class="note">This is a student demonstration page. Menu items and prices are examples, and orders are not real.</p>
+      </div>
+      <img src="images/dumping-food-truck-768x576.jpg" alt="Humpty's Dumplings food truck or dumplings" width="500" height="320">
+    </section>
+
+    <section class="order-section" aria-labelledby="order-heading">
+      <h2 id="order-heading">Place Your Pickup Order</h2>
+      <p>Fill out your contact details, select your dumplings and extras, and tell us when you'd like to pick up. Required fields are marked with an asterisk (*).</p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>1. Customer Information</legend>
+          <div class="form-grid">
+            <div class="field"><label for="customer-name">Customer Name *</label><input type="text" id="customer-name" name="customer_name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email Address *</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+            <div class="field"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" autocomplete="tel" required></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Choose Your Dumplings</legend>
+          <p class="help">Select as many items as you like.</p>
+          <div class="menu-list">
+            <label class="menu-item" for="classic"><input type="checkbox" id="classic" name="food_items" value="classic_chicken"><span><strong>Classic Chicken Dumplings</strong><small>Tender chicken with savory seasoning in a crispy wrapper.</small></span><b>$9.00</b></label>
+            <label class="menu-item" for="cheesesteak"><input type="checkbox" id="cheesesteak" name="food_items" value="cheesesteak"><span><strong>Philly Cheesesteak Dumplings</strong><small>Beef, melted cheese, and onions in a golden wrapper.</small></span><b>$11.00</b></label>
+            <label class="menu-item" for="buffalo"><input type="checkbox" id="buffalo" name="food_items" value="buffalo_chicken"><span><strong>Buffalo Chicken Dumplings</strong><small>Spicy buffalo chicken with a creamy finish.</small></span><b>$10.00</b></label>
+            <label class="menu-item" for="veggie"><input type="checkbox" id="veggie" name="food_items" value="vegetable"><span><strong>Garden Vegetable Dumplings</strong><small>A colorful mix of cabbage, carrots, and mushrooms.</small></span><b>$9.00</b></label>
+            <label class="menu-item" for="mac"><input type="checkbox" id="mac" name="food_items" value="mac_and_cheese"><span><strong>Mac &amp; Cheese Dumplings</strong><small>Creamy macaroni and cheese inside a crispy shell.</small></span><b>$10.00</b></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Customize Your Order</legend>
+          <div class="subgroup" role="group" aria-labelledby="size-label">
+            <h3 id="size-label">Order Size *</h3>
+            <div class="choice-row"><label for="regular"><input type="radio" id="regular" name="order_size" value="regular" required> Regular (6 dumplings)</label><label for="large"><input type="radio" id="large" name="order_size" value="large"> Large (10 dumplings)</label></div>
+            <p class="help">Size applies to your selected dumpling varieties. Specify quantities larger than offered above in special instructions and the appropriate price shall be applied at checkout.</p>
+          </div>
+          <div class="subgroup" role="group" aria-labelledby="extras-label">
+            <h3 id="extras-label">Extras</h3>
+            <div class="choice-row"><label for="ranch"><input type="checkbox" id="ranch" name="extras" value="ranch"> Ranch Dip (+$1)</label><label for="hot-sauce"><input type="checkbox" id="hot-sauce" name="extras" value="hot_sauce"> Hot Sauce (+$1)</label><label for="cheese"><input type="checkbox" id="cheese" name="extras" value="cheese"> Extra Cheese (+$2)</label></div>
+          </div>
+          <div class="field"><label for="drink">Choose a Drink</label><select id="drink" name="drink"><option value="none">No drink</option><option value="water">Bottled Water</option><option value="lemonade">Lemonade</option><option value="iced_tea">Iced Tea</option><option value="soda">Soda</option></select></div>
+          <div class="field"><label for="instructions">Special Instructions</label><textarea id="instructions" name="special_instructions" rows="4" placeholder="Example: Two orders of chicken dumplings, sauce on the side, no onions."></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Pickup Information</legend>
+          <div class="form-grid">
+            <div class="field"><label for="pickup-time">Preferred Pickup Date and Time *</label><input type="text" id="pickup-time" name="pickup_time" placeholder="Example: Friday at 12:30 PM" required></div>
+            <div class="field"><label for="pickup-name">Pickup Name (if different)</label><input type="text" id="pickup-name" name="pickup_name" placeholder="Leave blank if same as customer"></div>
+          </div>
+          <div class="field"><label for="pickup-notes">Additional Pickup Instructions</label><textarea id="pickup-notes" name="pickup_notes" rows="3" placeholder="Example: I'll be wearing a blue jacket."></textarea></div>
+        </fieldset>
+
+        <div class="form-actions"><button type="submit" class="submit-btn">Submit Order</button><button type="reset" class="reset-btn">Reset Form</button></div>
+      </form>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 Humpty's Dumplings — Web Design Week Nine Project</p></footer>
+</body>
+</html>
